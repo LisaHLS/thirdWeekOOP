@@ -55,7 +55,7 @@ public class Teacher extends Person{
 
     public boolean isTeaching(Student student) {
         for (Klass klass: classes) {
-            if (student.getKlass().equals(klass)) {
+            if (klass.isIn(student)) {
                 return true;
             }
         }

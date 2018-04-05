@@ -31,7 +31,7 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
-        if (student.getKlass().getNumber() == this.number) {
+        if (isIn(student)) {
             setLeader(student);
         } else {
             System.out.print("It is not one of us.\n");
@@ -42,6 +42,12 @@ public class Klass {
         student.setKlass(this);
     }
 
+    public boolean isIn(Student student) {
+        if (student.getKlass().getNumber() == this.number) {
+            return true;
+        }
+        return false;
+    }
 }
 
 
